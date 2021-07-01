@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
-import Index from './pages/index'
+import Index from './pages/center/index'
 
 import counterStore from './store/counter'
 
@@ -20,13 +20,44 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      'pages/first/index',
+      'pages/center/index',
+      'pages/order/index',
+      'pages/orderList/index',
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      list: [
+        {
+          pagePath: 'pages/first/index',
+          iconPath: 'assets/picture/icon1.png',
+          selectedIconPath: 'assets/picture/icon0.png',
+          text: '首页'
+        },
+        {
+          pagePath: 'pages/order/index',
+          iconPath: 'assets/picture/icon3.png',
+          selectedIconPath: 'assets/picture/icon2.png',
+          text: '点单'
+        },
+        {
+          pagePath: 'pages/orderList/index',
+          iconPath: 'assets/picture/icon5.png',
+          selectedIconPath: 'assets/picture/icon4.png',
+          text: '订单'
+        },
+        {
+          pagePath: 'pages/center/index',
+          iconPath: '',
+          selectedIconPath: '',
+          text: '我的'
+        },
+      ]
     }
   }
 

@@ -39,5 +39,7 @@
     "showES6CompileOption": false
   },
   "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {}
 }
